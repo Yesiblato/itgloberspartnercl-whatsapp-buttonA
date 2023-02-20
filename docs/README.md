@@ -1,27 +1,34 @@
 # WHATSAPP BUTTON COMPONENT
 
-Este es un componente personalizado que permite conectar a los clientes con un servicio personalizado a través de la aplicación WhatsApp.
+![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)
 
-En este componente se trabajó con las siguientes tecnologías:
+This is a custom component that allows you to connect customers with a personalized service through the WhatsApp application.
+
+In this component we worked with the following technologies:
 
 - Vtex.
 - React.
 - Typescript.
 - TACHYONS - Css Toolkit.
 
+## Component's images.
+
 ![whatsapp button](https://user-images.githubusercontent.com/87024446/219828772-4041cd17-78b9-497c-afa5-112809770905.JPG)
+
+![Whatsapp store](https://user-images.githubusercontent.com/87024446/220191543-f6babd5a-a691-4e7b-aa88-3c9e30866ef0.png)
 
 ## Configuration 
 
-### Paso 1 - Clonar
+### Step 1 - Clone.
 
-Realizar la clonación del siguiente repositorio:
-- [Repositorio](https://github.com/Yesiblato/itgloberspartnercl-whatsapp-buttonA)
+Cloning the following repository:
 
-### Paso 2 - Editar el Manifest.json 
+- [Repository](https://github.com/Yesiblato/itgloberspartnercl-whatsapp-buttonA)
 
-Ingresar al archivo manifest.json y realizar las siguentes modificaciones en: `vendor`, `name`, `version`, `title` y `description`
-como se muestra en el siguiente ejemplo: 
+### Step 2 - Edit the Manifest.json.
+
+Enter the manifest.json file and make the following changes to: `vendor`, `name`, `version`, `title` and `description`
+as shown in the following example:
 
 ```js
 {
@@ -32,7 +39,7 @@ como se muestra en el siguiente ejemplo:
   "description": "Botón de componente para whatsApp que recibirá un teléfono, un logo y un mensaje",
 }
 ```
-Además, verifique que el archivo cuente con los siguientes builders: 
+Also, check that the file has the following builders:
 
 ```js
   "builders": {
@@ -42,28 +49,54 @@ Además, verifique que el archivo cuente con los siguientes builders:
     "store": "0.x"
   }
 ```
-### Paso 3 - Instalar node-modules
+### Step 3 - Install node-modules.
 
-Para realizar esta instalación de node-modules, debe estar ubicado en la carpeta de `react` de la aplicación y ejecutar el comando `yarn`, y tendrá instaladas todas las dependencias necesarias para usar esta plantilla.
+To carry out this installation of Node-Modules, it must be located in the `react` folder of the application and execute the `yarn` command, and will have all the necessary units to use this template installed.
 
-### Paso 4 - Ejecutar el preview
+### Step 4 - Execute the preview.
 
-Despues de realizar los pasos anteriores puede verificar si su componente está funcionando ejecutando el comando `vtex link` si todo funciona correctamente deberá ver en consola `Sending locale change event`.
+After performing the previous steps you can verify if its component is running by running the `Vtex Link` command if everything works correctly should see in` Sending locale change event`.
 
-Si la consola muestra algún error, por favor verificar los pasos anteriores y vuelva a ejecutar `vtex link`.
+If the console shows any error, please verify the previous steps and re -execute `vtex link`.
 
-### Paso 5 - Implementar el componente
+### Step 5 - Deploy the component
 
-Por último, para utilizar el componente debe agregarlo a las `dependencies` en el `manifest.json` de su tienda (store-theme) de la siguiente manera:
+Finally, to use the component you must add it to the `dependencies` in the `manifest.json` of your store (store-theme) as follows:
 
 - vendor.name : version. 
 
-Por ejemplo: 
+For example:
 ```js
   "dependencies": {
     "itgloberspartnercl.whatsapp-button": "0.x",
   }
 ```
+And add the whatsapp-button block to the store-theme. For example:
+
+```js
+{
+  "whatsapp-button": {
+    "props": {
+      "logo": "assets/img/whatsapp-logo.png",
+      "phone": "3125661727",
+      "message": "Adidas Store",
+      "width":"100px",
+      "height":"100px"
+    }
+  }
+}
+```
+
+## Whatsapp-button props.
+
+| Prop name    | Type            | Description                                                                               | Default value    |
+| ------------ | --------------- | ----------------------------------------------------------------------------------------- | ---------------- | 
+| `logo`       | `String`        | Define the url of the image that will be used for the whatsapp button                     | `undefined` |
+| `phone`      | `String`        | Defines the WhatsApp number that the store uses to provide customer  service              | `3125661727` |
+| `message`    | `String`        | Define the welcome message that the client will see when entering the WhatsApp chat       | `Adidas store` |
+| `width`      | `Number`        | Define the width of the button                                                            | `70px` |
+| `height`     | `Number`        | Define the height of the button                                                           | `70px` |
+
 
 ## Contributors ✨
 
